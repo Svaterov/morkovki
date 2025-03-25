@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор варианта оплаты</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <header>
+        <h1>Выбор варианта оплаты</h1>
+    </header>
+    <main>
+        <section id="payment-options">
+            <h2>Выберите способ оплаты</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="payment" value="card" id="payment-card">
+                    <label for="payment-card">Кредитная карта</label>
+                </li>
+                <li>
+                    <input type="radio" name="payment" value="cash" id="payment-cash">
+                    <label for="payment-cash">Наличные</label>
+                </li>
+                <li>
+                    <input type="radio" name="payment" value="paypal" id="payment-paypal">
+                    <label for="payment-paypal">PayPal</label>
+                </li>
+            </ul>
+
+            <div id="card-details" style="display: none;">
+                <h3>Введите данные карты</h3>
+                <form id="card-form">
+                    <label for="card-number">Номер карты:</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                    
+                    <label for="card-expiry">Срок действия (MM/YY):</label>
+                    <input type="text" id="card-expiry" name="card-expiry" required>
+                    
+                    <label for="card-cvc">CVC:</label>
+                    <input type="text" id="card-cvc" name="card-cvc" required>
+                </form>
+            </div>
+
+            <button id="confirm-payment">Подтвердить оплату</button>
+            <button id="repeat-confirmation" style="display: none;">Повторное подтверждение</button>
+        </section>
+    </main>
+    <script src="payment.js"></script>
+</body>
+</html>
