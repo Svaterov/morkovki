@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Выбор варианта оплаты</title>
-    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="oplata.css">
 </head>
 <body>
     <header>
-        <h1>Выбор варианта оплаты</h1>
+        <h1></h1>
     </header>
     <main>
         <section id="payment-options">
@@ -16,7 +16,7 @@
             <ul>
                 <li>
                     <input type="radio" name="payment" value="card" id="payment-card">
-                    <label for="payment-card">Кредитная карта</label>
+                    <label for="payment-card">Игральная карта</label>
                 </li>
                 <li>
                     <input type="radio" name="payment" value="cash" id="payment-cash">
@@ -42,8 +42,10 @@
                 </form>
             </div>
 
+            <label for="amount">Сумма:</label>
+            <input type="text" id="amount" name="amount" required>
+
             <button id="confirm-payment">Подтвердить оплату</button>
-            <button id="repeat-confirmation" style="display: none;">Повторное подтверждение</button>
         </section>
     </main>
     <script src="payment.js"></script>
